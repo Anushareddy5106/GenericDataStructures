@@ -17,11 +17,10 @@ public class App {
         myLinkedList2.append(90);
         myLinkedList2.append(45);
 
-        Node prevNode = myLinkedList2.head;
         System.out.println("Before Insertion");
         myLinkedList2.display();
 
-        myLinkedList2.insertAfter(prevNode, 30);
+        myLinkedList2.insertAfter(5, 30);
 
         System.out.println("After Insertion");
         myLinkedList2.display();
@@ -71,6 +70,12 @@ public class App {
 
         orderedList.delete(40);
         orderedList.display();
+
+        // Indexof
+        System.out.println("Index : " + orderedList.indexOf(30));
+
+        // isEmpty
+        System.out.println("isEmpty : " + orderedList.isEmpty());
 
     }
 }

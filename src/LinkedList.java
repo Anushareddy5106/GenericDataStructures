@@ -16,13 +16,30 @@ public class LinkedList {
     }
 
     // Insertion
-    public void insertAfter(Node prevNode, int data) {
-        if (prevNode == null) {
-            System.out.println("Previous node cannot be null.");
+    public void insertAfter(int pos, int data) {
+        // if (prevNode == null) {
+        // System.out.println("Previous node cannot be null.");
+        // return;
+        // }
+
+        if (pos > this.size()) {
+            System.out.println("Invalid Position.");
             return;
         }
 
         Node newNode = new Node(data);
+
+        if (pos == 0) {
+            newNode.next = head;
+            head = newNode;
+            return;
+        }
+
+        Node prevNode = head;
+        while (pos > 1) {
+            prevNode = prevNode.next;
+            pos--;
+        }
         newNode.next = prevNode.next;
         prevNode.next = newNode;
     }
@@ -104,6 +121,25 @@ public class LinkedList {
             current = current.next;
         }
         return count;
+    }
+
+    // isEmpty
+    public boolean isEmpty() {
+        return this.size() == 0 ? true : false;
+    }
+
+    // Index
+    public int indexOf(int key) {
+        Node current = head;
+        int pos = 1;
+        while (current != null) {
+            if (current.data == key) {
+                return pos;
+            }
+            current = current.next;
+            pos++;
+        }
+        return -1;
     }
 
     // Display
