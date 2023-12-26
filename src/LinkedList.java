@@ -20,7 +20,8 @@ public class LinkedList<T extends Comparable<T>> {
         }
     }
 
-    // append at head
+
+    // Append at head
     public void appendAtHead(T data) {
         Node<T> newNode = new Node<T>(data);
         if (head == null) {

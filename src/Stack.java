@@ -1,5 +1,3 @@
-import java.util.EmptyStackException;
-
 public class Stack<T extends Comparable<T>> {
 
     LinkedList<T> list;
