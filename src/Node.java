@@ -1,14 +1,14 @@
-public class Node implements Comparable<Node> {
-    int data;
-    Node next;
+public class Node<T extends Comparable<T>> implements Comparable<Node<T>> {
+    T data;
+    Node<T> next;
 
-    public Node(int data) {
+    public Node(T data) {
         this.data = data;
         this.next = null;
     }
 
     @Override
-    public int compareTo(Node node) {
-        return Integer.compare(this.data, node.data);
+    public int compareTo(Node<T> node) {
+        return this.data.compareTo(node.data);
     }
 }

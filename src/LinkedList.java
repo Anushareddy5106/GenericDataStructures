@@ -1,13 +1,13 @@
-public class LinkedList {
-    Node head;
+public class LinkedList<T extends Comparable<T>> {
+    Node<T> head;
 
     // Adding the element
-    public void append(int data) {
-        Node newNode = new Node(data);
+    public void append(T data) {
+        Node<T> newNode = new Node<T>(data);
         if (head == null) {
             head = newNode;
         } else {
-            Node current = head;
+            Node<T> current = head;
             while (current.next != null) {
                 current = current.next;
             }
@@ -16,7 +16,7 @@ public class LinkedList {
     }
 
     // Insertion
-    public void insertAfter(int pos, int data) {
+    public void insertAfter(int pos, T data) {
         // if (prevNode == null) {
         // System.out.println("Previous node cannot be null.");
         // return;
@@ -27,7 +27,7 @@ public class LinkedList {
             return;
         }
 
-        Node newNode = new Node(data);
+        Node<T> newNode = new Node<T>(data);
 
         if (pos == 0) {
             newNode.next = head;
@@ -35,7 +35,7 @@ public class LinkedList {
             return;
         }
 
-        Node prevNode = head;
+        Node<T> prevNode = head;
         while (pos > 1) {
             prevNode = prevNode.next;
             pos--;
@@ -66,8 +66,8 @@ public class LinkedList {
             return;
         }
 
-        Node current = head;
-        Node prev = null;
+        Node<T> current = head;
+        Node<T> prev = null;
 
         while (current.next != null) {
             prev = current;
@@ -78,8 +78,8 @@ public class LinkedList {
     }
 
     // Searching
-    public Node search(int key) {
-        Node current = head;
+    public Node<T> search(T key) {
+        Node<T> current = head;
         while (current != null) {
             if (current.data == key) {
                 return current;
@@ -90,9 +90,9 @@ public class LinkedList {
     }
 
     // Deleting the node with specific key
-    public void delete(int key) {
-        Node current = head;
-        Node prev = null;
+    public void delete(T key) {
+        Node<T> current = head;
+        Node<T> prev = null;
 
         if (current != null && current.data == key) {
             head = current.next;
@@ -115,7 +115,7 @@ public class LinkedList {
     // Size of the LinkedList
     public int size() {
         int count = 0;
-        Node current = head;
+        Node<T> current = head;
         while (current != null) {
             count++;
             current = current.next;
@@ -129,8 +129,8 @@ public class LinkedList {
     }
 
     // Index
-    public int indexOf(int key) {
-        Node current = head;
+    public int indexOf(T key) {
+        Node<T> current = head;
         int pos = 1;
         while (current != null) {
             if (current.data == key) {
@@ -144,7 +144,7 @@ public class LinkedList {
 
     // Display
     public void display() {
-        Node current = head;
+        Node<T> current = head;
         while (current != null) {
             System.out.print(current.data + " -> ");
             current = current.next;

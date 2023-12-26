@@ -3,14 +3,14 @@ public class App {
         System.out.println("LinkedList Using Generics");
 
         // LinkedList Creation
-        LinkedList myLinkedList1 = new LinkedList();
+        LinkedList<String> myLinkedList1 = new LinkedList<>();
 
-        myLinkedList1.append(56);
-        myLinkedList1.append(30);
-        myLinkedList1.append(70);
+        myLinkedList1.append("App");
+        myLinkedList1.append("Gogg");
+        myLinkedList1.append("Ge");
 
         // Insertion
-        LinkedList myLinkedList2 = new LinkedList();
+        LinkedList<Integer> myLinkedList2 = new LinkedList<>();
 
         myLinkedList2.append(56);
         myLinkedList2.append(70);
@@ -38,7 +38,7 @@ public class App {
         myLinkedList2.display();
 
         // Searching
-        Node result = myLinkedList2.search(30);
+        Node<Integer> result = myLinkedList2.search(30);
         if (result != null)
             System.out.println("Node found");
         else
@@ -54,7 +54,7 @@ public class App {
         System.out.println("Size of the LinkedList " + myLinkedList2.size());
 
         // OrderedLinkedList
-        OrderedLinkedList orderedList = new OrderedLinkedList();
+        OrderedLinkedList<Integer> orderedList = new OrderedLinkedList<>();
 
         orderedList.append(56);
         orderedList.append(30);

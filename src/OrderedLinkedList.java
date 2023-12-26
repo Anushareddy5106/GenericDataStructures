@@ -1,15 +1,16 @@
-public class OrderedLinkedList extends LinkedList {
+public class OrderedLinkedList<T extends Comparable<T>> extends LinkedList<T> {
 
     // Add in sorted way
     @Override
-    public void append(int data) {
-        Node newNode = new Node(data);
+    public void append(T data) {
+        Node<T> newNode = new Node<T>(data);
 
         if (head == null || head.compareTo(newNode) > 0) {
             newNode.next = head;
             head = newNode;
-        } else {
-            Node current = head;
+        } 
+        else {
+            Node<T> current = head;
 
             while (current.next != null && current.next.compareTo(newNode) < 0) {
                 current = current.next;
@@ -22,7 +23,7 @@ public class OrderedLinkedList extends LinkedList {
 
     // Display
     public void display() {
-        Node current = head;
+        Node<T> current = head;
         while (current != null) {
             System.out.print(current.data + " -> ");
             current = current.next;
