@@ -1,19 +1,19 @@
-public class Stack<T extends Comparable<T>> {
+public class Queue<T extends Comparable<T>> {
 
     LinkedList<T> list;
 
-    Stack() {
+    Queue() {
         this.list = new LinkedList<>();
     }
 
-    // Push
-    public void push(T data) {
-        list.appendAtHead(data);
+    // enqueue
+    public void enqueue(T data) {
+        list.appendAtTail(data);
     }
 
-    public T pop() {
+    public T dequeue() {
         if (isEmpty()) {
-            System.out.println("Stack is empty");
+            System.out.println("Queue is empty");
         }
 
         T poppedData = list.head.data;
@@ -21,10 +21,10 @@ public class Stack<T extends Comparable<T>> {
         return poppedData;
     }
 
-    // Peek
-    public T peek() {
+    // dequeue
+    public T front() {
         if (isEmpty()) {
-            System.out.println("Stack is empty.No peek element");
+            System.out.println("Queue is empty.No peek element");
         }
 
         return list.head.data;

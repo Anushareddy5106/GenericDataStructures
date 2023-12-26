@@ -92,12 +92,29 @@ public class App {
         System.out.println("Stack :");
         stack.display();
 
-
         System.out.println("Stack after Pop operation :");
         stack.pop();
         stack.display();
 
         System.out.println("Peek element  :" + stack.peek());
 
+        // Queue
+        System.out.println("--------------------Queue----------------------");
+        Queue<Integer> queue = new Queue<>();
+
+        queue.enqueue(19);
+        queue.enqueue(20);
+        queue.enqueue(15);
+        queue.enqueue(7);
+        queue.enqueue(39);
+
+        System.out.println("Queue :");
+        queue.display();
+
+        System.out.println("Queue after ]dequeue operation :");
+        queue.dequeue();
+        queue.display();
+
+        System.out.println("Front element  :" + queue.front());
     }
 }
