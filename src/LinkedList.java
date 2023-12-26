@@ -72,6 +72,30 @@ public class LinkedList {
         return null;
     }
 
+    // Deleting the node with specific key
+    public void delete(int key) {
+        Node current = head;
+        Node prev = null;
+
+        if (current != null && current.data == key) {
+            head = current.next;
+            return;
+        }
+
+        while (current != null && current.data != key) {
+            prev = current;
+            current = current.next;
+        }
+
+        if (current == null) {
+            System.out.println("Key " + key + " not found in the linked list.");
+            return;
+        }
+
+        prev.next = current.next;
+    }
+
+    // Display
     public void display() {
         Node current = head;
         while (current != null) {

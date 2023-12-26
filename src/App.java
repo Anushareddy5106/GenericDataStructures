@@ -44,5 +44,11 @@ public class App {
             System.out.println("Node found");
         else
             System.out.println("Node not found");
+
+        // Deleting a specified key
+        myLinkedList2.delete(70);
+
+        System.out.println("After deleting specified key:");
+        myLinkedList2.display();
     }
 }
