@@ -92,5 +92,12 @@ public class App {
         System.out.println("Stack :");
         stack.display();
 
+
+        System.out.println("Stack after Pop operation :");
+        stack.pop();
+        stack.display();
+
+        System.out.println("Peek element  :" + stack.peek());
+
     }
 }

@@ -1,12 +1,12 @@
 public class LinkedList<T extends Comparable<T>> {
-    Node<T> head;
+    public Node<T> head;
 
     // Adding the element
     public void add(T data) {
         appendAtTail(data);
     }
 
-    // Append at tail
+    // append at tail
     public void appendAtTail(T data) {
         Node<T> newNode = new Node<T>(data);
         if (head == null) {
@@ -20,6 +20,7 @@ public class LinkedList<T extends Comparable<T>> {
         }
     }
 
+
     // Append at head
     public void appendAtHead(T data) {
         Node<T> newNode = new Node<T>(data);
@@ -28,13 +29,11 @@ public class LinkedList<T extends Comparable<T>> {
         } else {
             newNode.next = head;
             head = newNode;
-
         }
     }
 
     // Insertion
     public void insertAfter(int pos, T data) {
-
         if (pos > this.size()) {
             System.out.println("Invalid Position.");
             return;
