@@ -1,3 +1,5 @@
+import java.util.EmptyStackException;
+
 public class Stack<T extends Comparable<T>> {
 
     LinkedList<T> list;
@@ -9,6 +11,29 @@ public class Stack<T extends Comparable<T>> {
     // Push
     public void push(T data) {
         list.appendAtHead(data);
+    }
+
+    public T pop() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+
+        T poppedData = list.head.data;
+        list.head = list.head.next;
+        return poppedData;
+    }
+
+    // Peek
+    public T peek() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty.No peek element");
+        }
+
+        return list.head.data;
+    }
+
+    public boolean isEmpty() {
+        return list.head == null;
     }
 
     // Display the elements
