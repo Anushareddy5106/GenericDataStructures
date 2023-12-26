@@ -10,6 +10,7 @@ public class App {
         myLinkedList1.add("Ge");
 
         // Insertion
+        System.out.println("--------------------LinkedList----------------------");
         LinkedList<Integer> myLinkedList2 = new LinkedList<>();
 
         myLinkedList2.add(56);
@@ -54,6 +55,7 @@ public class App {
         System.out.println("Size of the LinkedList " + myLinkedList2.size());
 
         // OrderedLinkedList
+        System.out.println("--------------------Ordered LinkedList----------------------");
         OrderedLinkedList<Integer> orderedList = new OrderedLinkedList<>();
 
         orderedList.add(56);
