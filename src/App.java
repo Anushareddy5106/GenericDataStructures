@@ -5,17 +5,18 @@ public class App {
         // LinkedList Creation
         LinkedList<String> myLinkedList1 = new LinkedList<>();
 
-        myLinkedList1.append("App");
-        myLinkedList1.append("Gogg");
-        myLinkedList1.append("Ge");
+        myLinkedList1.add("App");
+        myLinkedList1.add("Gogg");
+        myLinkedList1.add("Ge");
 
         // Insertion
+        System.out.println("--------------------LinkedList----------------------");
         LinkedList<Integer> myLinkedList2 = new LinkedList<>();
 
-        myLinkedList2.append(56);
-        myLinkedList2.append(70);
-        myLinkedList2.append(90);
-        myLinkedList2.append(45);
+        myLinkedList2.add(56);
+        myLinkedList2.add(70);
+        myLinkedList2.add(90);
+        myLinkedList2.add(45);
 
         System.out.println("Before Insertion");
         myLinkedList2.display();
@@ -54,13 +55,14 @@ public class App {
         System.out.println("Size of the LinkedList " + myLinkedList2.size());
 
         // OrderedLinkedList
+        System.out.println("--------------------Ordered LinkedList----------------------");
         OrderedLinkedList<Integer> orderedList = new OrderedLinkedList<>();
 
-        orderedList.append(56);
-        orderedList.append(30);
-        orderedList.append(40);
-        orderedList.append(70);
-        orderedList.append(22);
+        orderedList.add(56);
+        orderedList.add(30);
+        orderedList.add(40);
+        orderedList.add(70);
+        orderedList.add(22);
 
         System.out.println("Ordered Linked List:");
         orderedList.display();
@@ -76,6 +78,19 @@ public class App {
 
         // isEmpty
         System.out.println("isEmpty : " + orderedList.isEmpty());
+
+        // Stack
+        System.out.println("--------------------Stack----------------------");
+        Stack<Integer> stack = new Stack<>();
+
+        stack.push(19);
+        stack.push(20);
+        stack.push(15);
+        stack.push(7);
+        stack.push(39);
+
+        System.out.println("Stack :");
+        stack.display();
 
     }
 }
