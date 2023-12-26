@@ -1,8 +1,13 @@
 public class LinkedList<T extends Comparable<T>> {
-    Node<T> head;
+    public Node<T> head;
 
     // Adding the element
-    public void append(T data) {
+    public void add(T data) {
+        appendAtTail(data);
+    }
+
+    // append at tail
+    public void appendAtTail(T data) {
         Node<T> newNode = new Node<T>(data);
         if (head == null) {
             head = newNode;
@@ -15,13 +20,19 @@ public class LinkedList<T extends Comparable<T>> {
         }
     }
 
+    // append at head
+    public void appendAtHead(T data) {
+        Node<T> newNode = new Node<T>(data);
+        if (head == null) {
+            head = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+    }
+
     // Insertion
     public void insertAfter(int pos, T data) {
-        // if (prevNode == null) {
-        // System.out.println("Previous node cannot be null.");
-        // return;
-        // }
-
         if (pos > this.size()) {
             System.out.println("Invalid Position.");
             return;
