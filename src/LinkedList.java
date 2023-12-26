@@ -37,6 +37,41 @@ public class LinkedList {
         head = head.next;
     }
 
+    // Deletion from last
+    public void popLast() {
+        if (head == null) {
+            System.out.println("The linked list is empty. Cannot pop.");
+            return;
+        }
+
+        if (head.next == null) {
+            head = null;
+            return;
+        }
+
+        Node current = head;
+        Node prev = null;
+
+        while (current.next != null) {
+            prev = current;
+            current = current.next;
+        }
+
+        prev.next = null;
+    }
+
+    // Searching
+    public Node search(int key) {
+        Node current = head;
+        while (current != null) {
+            if (current.data == key) {
+                return current;
+            }
+            current = current.next;
+        }
+        return null;
+    }
+
     public void display() {
         Node current = head;
         while (current != null) {

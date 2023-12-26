@@ -14,6 +14,8 @@ public class App {
 
         myLinkedList2.append(56);
         myLinkedList2.append(70);
+        myLinkedList2.append(90);
+        myLinkedList2.append(45);
 
         Node prevNode = myLinkedList2.head;
         System.out.println("Before Insertion");
@@ -24,11 +26,23 @@ public class App {
         System.out.println("After Insertion");
         myLinkedList2.display();
 
-        // deletion
+        // deletion from front
         myLinkedList2.pop();
 
-        System.out.println("After Deletion");
+        System.out.println("After Deletion from front");
         myLinkedList2.display();
 
+        // deletion from last
+        myLinkedList2.popLast();
+
+        System.out.println("After Deletion from last:");
+        myLinkedList2.display();
+
+        // Searching
+        Node result = myLinkedList2.search(30);
+        if (result != null)
+            System.out.println("Node found");
+        else
+            System.out.println("Node not found");
     }
 }
