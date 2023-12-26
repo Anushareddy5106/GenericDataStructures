@@ -95,6 +95,17 @@ public class LinkedList {
         prev.next = current.next;
     }
 
+    // Size of the LinkedList
+    public int size() {
+        int count = 0;
+        Node current = head;
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
+        return count;
+    }
+
     // Display
     public void display() {
         Node current = head;

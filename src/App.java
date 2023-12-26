@@ -50,5 +50,8 @@ public class App {
 
         System.out.println("After deleting specified key:");
         myLinkedList2.display();
+
+        // Size
+        System.out.println("Size of the LinkedList " + myLinkedList2.size());
     }
 }
