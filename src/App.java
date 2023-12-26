@@ -53,5 +53,24 @@ public class App {
 
         // Size
         System.out.println("Size of the LinkedList " + myLinkedList2.size());
+
+        // OrderedLinkedList
+        OrderedLinkedList orderedList = new OrderedLinkedList();
+
+        orderedList.append(56);
+        orderedList.append(30);
+        orderedList.append(40);
+        orderedList.append(70);
+        orderedList.append(22);
+
+        System.out.println("Ordered Linked List:");
+        orderedList.display();
+
+        orderedList.popLast();
+        orderedList.display();
+
+        orderedList.delete(40);
+        orderedList.display();
+
     }
 }
